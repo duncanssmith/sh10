@@ -7,7 +7,7 @@
         ">
             {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Pages' }}
 
-<!-- {{--            <x-icon name="down-arrow" class="absolute pointer-events-none" style=""/>--}} -->
+{{            <x-icon name="down-arrow" class="absolute pointer-events-none" style=""/>}}
         </button>
     </x-slot>
 

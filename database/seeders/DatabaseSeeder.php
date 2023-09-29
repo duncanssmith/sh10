@@ -10,6 +10,10 @@ use App\Models\Text;
 use App\Models\User;
 use App\Models\Work;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,7 +33,8 @@ class DatabaseSeeder extends Seeder
         User::factory(1)->create([
             'name' => 'Duncan Smith',
             'username' => 'duncan.smith',
-            'email' => 'duncan.smith@gmail.com',
+            'email' => 'duncanssmith@gmail.com',
+            'password' => Hash::make('password'),
         ]);
 
         User::factory(3)->create();
@@ -78,58 +83,76 @@ class DatabaseSeeder extends Seeder
             'thumbnail' => 'thumbnails/RKvUrGQ5LUXX9sEyGZQZ4KRq7WAGNftO7okpGWWP.jpg',
             'thumbnail' => 'thumbnails/ybv7KOsH4CIFH06lvD0n2n9mC1xxLqNEQdi5rq9Z.jpg',
         */
+/*
+
+12falkTLB3dzg1HnH2lkqyKTVRFJq9YOSvKnVQbD.jpg
+4F3bwTIOOb1yHoDwBI2cAWv3rZuPHOnGt9C0R0xV.jpg
+4IVH70HjnLXj87uiMeKBxru2C21i85Al0G7kSgod.jpg
+4xtwAI4ThcPXRfVYDXDMjuqUJDjoNNvb5uWKaz9Y.png
+8scZFndn20Cn3vnrl04RddEQe6QHsSVICv1I23nx.png
+DDKnfn95AAuMHnn3bAHg4bxWOVG5LWGpZw01vH4e.jpg
+Eg7b5x5ktkP5hS4gvQ1RQEAEWJIG5n7wF8TDjXAG.jpg
+F4fXWzuRrwz3DimAO0ai1tHI4DkMv77oJJxh1gYu.jpg
+NxslfjSC6q3xXJtOTWwfM8dV1gSCwFaAtJ15BNsD.png
+PjJPczHx030AAPsfFSC3gfW6KpDlNZgYuGKNCX31.jpg
+RzB2jrFWJB4M0rKIWzCOwW4Q2fnvyUPs00mpSj0i.jpg
+gM5gvTUhIz8Xkf1YHRl1E7Gukh7dtWAIIyvknOCr.png
+qwEQVJsBZgqo0DU9v7bfWlkRNGs3GoqZBdbJtp9k.jpg
+
+*/
+
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/7zeWq9tpSiQ2nv5STJ9t6p0QNQOxfHi14LmOlHeC.jpg',
+            'thumbnail' => 'thumbnails/12falkTLB3dzg1HnH2lkqyKTVRFJq9YOSvKnVQbD.jpg',
             'user_id' => 1,
             'category_id' => 6,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/97jiYPsC7c9VBzxS1BuFH2rvjEtMO5vTK2GsH0IA.jpg',
+            'thumbnail' => 'thumbnails/4F3bwTIOOb1yHoDwBI2cAWv3rZuPHOnGt9C0R0xV.jpg',
             'user_id' => 1,
             'category_id' => 6,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/cTYsXr5mseJPbplrCIQCLkzY3g2wTMIJEG2PUDOi.jpg',
+            'thumbnail' => 'thumbnails/4IVH70HjnLXj87uiMeKBxru2C21i85Al0G7kSgod.jpg',
             'user_id' => 1,
             'category_id' => 6,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/JCGD5WhwkslWKwUcyLe1Ar88Y0Nb2L3lDW4nZ3x2.jpg',
+            'thumbnail' => 'thumbnails/4xtwAI4ThcPXRfVYDXDMjuqUJDjoNNvb5uWKaz9Y.jpg',
             'user_id' => 1,
             'category_id' => 6,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/MRPr9daxotsvirULK6X4irLMQxGS4Wrt8Woay2n4.jpg',
+            'thumbnail' => 'thumbnails/8scZFndn20Cn3vnrl04RddEQe6QHsSVICv1I23nx.jpg',
             'user_id' => 1,
             'category_id' => 6,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/mxekNxvylONJ9iqxbEW1uMcTgpJTytgneIKgES0R.jpg',
+            'thumbnail' => 'thumbnails/DDKnfn95AAuMHnn3bAHg4bxWOVG5LWGpZw01vH4e.jpg',
             'user_id' => 2,
             'category_id' => 3,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/mxekNxvylONJ9iqxbEW1uMcTgpJTytgneIKgES0R.jpg',
+            'thumbnail' => 'thumbnails/Eg7b5x5ktkP5hS4gvQ1RQEAEWJIG5n7wF8TDjXAG.jpg',
             'user_id' => 2,
             'category_id' => 3,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/ZbQG4WDbzMvLenfgBLd03JF6bqp4leRs0DoxUdBC.jpg',
+            'thumbnail' => 'thumbnails/F4fXWzuRrwz3DimAO0ai1tHI4DkMv77oJJxh1gYu.jpg',
             'user_id' => 2,
             'category_id' => 3,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/Qsysl4NML40hjkKnehg86ySWmNgHTppkDJD9OXcP.jpg',
+            'thumbnail' => 'thumbnails/PjJPczHx030AAPsfFSC3gfW6KpDlNZgYuGKNCX31.jpg',
             'user_id' => 2,
             'category_id' => 3,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/RKvUrGQ5LUXX9sEyGZQZ4KRq7WAGNftO7okpGWWP.jpg',
+            'thumbnail' => 'thumbnails/NxslfjSC6q3xXJtOTWwfM8dV1gSCwFaAtJ15BNsD.jpg',
             'user_id' => 2,
             'category_id' => 3,
         ]);
         Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/ybv7KOsH4CIFH06lvD0n2n9mC1xxLqNEQdi5rq9Z.jpg',
+            'thumbnail' => 'thumbnails/RzB2jrFWJB4M0rKIWzCOwW4Q2fnvyUPs00mpSj0i.jpg',
             'user_id' => 2,
             'category_id' => 3,
         ]);
@@ -219,10 +242,25 @@ class DatabaseSeeder extends Seeder
 
 //        Text::factory(9)->create();
 
+/*
+01 thumbnails/12falkTLB3dzg1HnH2lkqyKTVRFJq9YOSvKnVQbD.jpg
+02 thumbnails/DDKnfn95AAuMHnn3bAHg4bxWOVG5LWGpZw01vH4e.jpg
+03 thumbnails/NxslfjSC6q3xXJtOTWwfM8dV1gSCwFaAtJ15BNsD.png
+04 thumbnails/8scZFndn20Cn3vnrl04RddEQe6QHsSVICv1I23nx.png
+
+05 thumbnails/PjJPczHx030AAPsfFSC3gfW6KpDlNZgYuGKNCX31.jpg
+06 thumbnails/4IVH70HjnLXj87uiMeKBxru2C21i85Al0G7kSgod.jpg
+07 thumbnails/gM5gvTUhIz8Xkf1YHRl1E7Gukh7dtWAIIyvknOCr.png
+08 thumbnails/qwEQVJsBZgqo0DU9v7bfWlkRNGs3GoqZBdbJtp9k.jpg
+
+09 thumbnails/F4fXWzuRrwz3DimAO0ai1tHI4DkMv77oJJxh1gYu.jpg
+10 thumbnails/Eg7b5x5ktkP5hS4gvQ1RQEAEWJIG5n7wF8TDjXAG.jpg
+11 thumbnails/4xtwAI4ThcPXRfVYDXDMjuqUJDjoNNvb5uWKaz9Y.png
+*/
         Work::create([
             'title' => 'Cat\'s Meow',
             'slug' => 'cats-meow',
-            'thumbnail' => 'thumbnails/7zeWq9tpSiQ2nv5STJ9t6p0QNQOxfHi14LmOlHeC.jpg',
+            'thumbnail' => '01.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '30 x 50 cm',
             'work_date' => '2020-03-14'
@@ -231,7 +269,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Painter\'s Block',
             'slug' => 'painters-block',
-            'thumbnail' => 'thumbnails/97jiYPsC7c9VBzxS1BuFH2rvjEtMO5vTK2GsH0IA.jpg',
+            'thumbnail' => '02.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '24 x 35 cm',
             'work_date' => '2020-03-14'
@@ -240,7 +278,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Slap Happy',
             'slug' => 'slap-happy',
-            'thumbnail' => 'thumbnails/cTYsXr5mseJPbplrCIQCLkzY3g2wTMIJEG2PUDOi.jpg',
+            'thumbnail' => '03.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '11 x 27 cm',
             'work_date' => '2020-03-14'
@@ -249,7 +287,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Happy Hour II',
             'slug' => 'happy-hour-ii',
-            'thumbnail' => 'thumbnails/JCGD5WhwkslWKwUcyLe1Ar88Y0Nb2L3lDW4nZ3x2.jpg',
+            'thumbnail' => '04.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '58 x 212 cm',
             'work_date' => '2020-03-14'
@@ -258,7 +296,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Faster Pussycat!',
             'slug' => 'faster-pussycat',
-            'thumbnail' => 'thumbnails/MRPr9daxotsvirULK6X4irLMQxGS4Wrt8Woay2n4.jpg',
+            'thumbnail' => '05.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '168 x 225 cm',
             'work_date' => '2020-03-14'
@@ -267,7 +305,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Angelina',
             'slug' => 'angelina',
-            'thumbnail' => 'thumbnails/mxekNxvylONJ9iqxbEW1uMcTgpJTytgneIKgES0R.jpg',
+            'thumbnail' => '06.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2007-03-14'
@@ -276,7 +314,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'City Of Tiny Lights',
             'slug' => 'city-of-tiny-lights',
-            'thumbnail' => 'thumbnails/mxekNxvylONJ9iqxbEW1uMcTgpJTytgneIKgES0R.jpg',
+            'thumbnail' => '07.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2020-03-14'
@@ -285,7 +323,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Baby Snakes',
             'slug' => 'baby-snakes',
-            'thumbnail' => 'thumbnails/ZbQG4WDbzMvLenfgBLd03JF6bqp4leRs0DoxUdBC.jpg',
+            'thumbnail' => '08.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2020-03-14'
@@ -294,7 +332,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Tame Llama',
             'slug' => 'tame-llama',
-            'thumbnail' => 'thumbnails/Qsysl4NML40hjkKnehg86ySWmNgHTppkDJD9OXcP.jpg',
+            'thumbnail' => '09.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2020-03-14'
@@ -303,7 +341,7 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Everybody Knows',
             'slug' => 'everybody-knows',
-            'thumbnail' => 'thumbnails/RKvUrGQ5LUXX9sEyGZQZ4KRq7WAGNftO7okpGWWP.jpg',
+            'thumbnail' => '10.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2020-03-14'
@@ -312,7 +350,70 @@ class DatabaseSeeder extends Seeder
         Work::create([
             'title' => 'Windsocks',
             'slug' => 'windsocks',
-            'thumbnail' => 'thumbnails/ybv7KOsH4CIFH06lvD0n2n9mC1xxLqNEQdi5rq9Z.jpg',
+            'thumbnail' => '11.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'High On The Hog',
+            'slug' => 'high-on-the-hog',
+            'thumbnail' => '12.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'Moon River',
+            'slug' => 'moon-river',
+            'thumbnail' => '13.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'High Life',
+            'slug' => 'high-life',
+            'thumbnail' => '14.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'Tossa De Mar',
+            'slug' => 'tossa-de-mar',
+            'thumbnail' => '15.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'Box Jellyfish',
+            'slug' => 'box-jellyfish',
+            'thumbnail' => '16.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'Telly Welly',
+            'slug' => 'telly-welly',
+            'thumbnail' => '17.jpg',
+            'media' => 'Flashe on plywood',
+            'dimensions' => '10 x 20 cm',
+            'work_date' => '2020-03-14'
+        ]);
+
+        Work::create([
+            'title' => 'Vital Sign',
+            'slug' => 'vital-sign',
+            'thumbnail' => '18.jpg',
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2020-03-14'

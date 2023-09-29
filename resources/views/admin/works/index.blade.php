@@ -22,7 +22,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             @if ($work->thumbnail)
                                                 <a href="/works/{{ $work->slug }}">
-                                                    <img src="{{ asset($work->thumbnail) }}" />
+                                                    <img src="{{ asset('storage/thumbnails/'.$work->thumbnail) }}" class="w-1/1" alt="{{ $work->title }}" />
                                                 </a>
                                             @endif
                                         </td>
@@ -56,7 +56,8 @@
                                                             <h4 class="modal-title">Delete</h4>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Are you sure you want to delete '{{$work->title}}'?
+                                                            Deleting '{{$work->title}}' Are you sure?
+ 
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">Close</button>

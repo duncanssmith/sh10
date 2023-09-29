@@ -4,7 +4,7 @@
 
     <x-form.label name="{{ $name }}"/>
 
-    <input class="border border-gray-400 p-2 w-full text-gray-800"
+    <input class="border border-gray-400 p-2 w-full text-gray-800" 
            type="file"
            name="{{ $name }}"
            id="{{ $name }}"

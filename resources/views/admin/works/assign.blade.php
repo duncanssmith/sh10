@@ -1,7 +1,7 @@
 <x-layout>
     <h1>{{ $work->title }}, {{ $work->work_date }}</h1>
     <p>Select the pages you want this work to appear on.</p>
-    <img src="{{ asset($work->thumbnail) }}" width="10%"/>&nbsp;
+    <img src="{{ asset('storage/thumbnails/'.$work->thumbnail) }}" width="10%"/>&nbsp;
 
     <form method="POST" action="/admin/category/save_assigned_work" enctype="multipart/form-data">
         @csrf

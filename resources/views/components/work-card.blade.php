@@ -8,7 +8,8 @@
         <div class="py-4 px-2">
             <div>
                 @if ($work->thumbnail)
-                <img src="{{ asset($work->thumbnail) }}" alt="{{ $work->title }} " class="w-1/2"/>
+                    <!-- <img src="{{ asset($work->thumbnail) }}" alt=" {{ $work->title }} " class="w-1/2"/> -->
+                    <img src="{{ url('storage/thumbnails/'.$work->thumbnail) }}" alt="{{ $work->slug }}" class="w-1/5"/>
                 @else
                     <h3>No image</h3>
                 @endif
@@ -38,6 +39,9 @@
                         <h1 class="text-base">
                             {{ $work->title }}
                         </h1>
+                        <p class="text-base">
+                            {{ $work->id }}
+                        </p>
                         <p class="text-base">
                             {{ $work->media }}
                         </p>

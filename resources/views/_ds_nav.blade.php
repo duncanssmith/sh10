@@ -20,5 +20,6 @@
         type="button">
         <a href="/works">Works</a>
     </button>
-    <x-category-dropdown/>
+
+    {{-- <x-category-dropdown :categories="{{ $categories }}"/> --}}
 </div>

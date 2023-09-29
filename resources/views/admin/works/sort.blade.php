@@ -33,7 +33,7 @@
                     <td class="px-4 py-4 text-blue-500 "><i class="fa fa-random" title="s:[{{$work->pivot->order}}]"></i></td>
 {{--                    <td class="border border-solid ">{{ $work->pivot->order }}</td>--}}
 {{--                    <td class="border border-solid ">{{ $work->id }}</td>--}}
-                    <td class="border border-solid px-4 py-2"><img src="{{ asset( $work->thumbnail )}}" width="15%" title="{{ $work->id }}"/></td>
+                    <td class="border border-solid px-4 py-2"><img src="{{ asset('storage/thumbnails/'.$work->thumbnail )}}" width="15%" title="{{ $work->id }}"/></td>
                     <td class="border border-solid px-4">{{ $work->title }}</td>
                     <td class="border border-solid px-4">{{ $work->slug }}</td>
                     <td class="border border-solid px-4">{{ $work->media }}</td>

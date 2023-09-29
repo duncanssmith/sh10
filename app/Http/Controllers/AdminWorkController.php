@@ -35,7 +35,6 @@ class AdminWorkController extends Controller
 
     public function create()
     {
-//        dd(request());
         return view('admin.works.create');
     }
 
