@@ -2,7 +2,6 @@
 
         <div class="px-2 py-20">
 
-
             <p class="font-semibold text-gray-500">Name: {{ $category->name }} </p>
             <p class="font-semibold text-gray-500">Slug: {{ $category->slug }} </p>
             <p class="font-semibold text-gray-500">Display?:

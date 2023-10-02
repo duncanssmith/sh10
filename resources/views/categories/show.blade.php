@@ -1,6 +1,29 @@
 <x-layout :categories="$categories">
+<!-- TODO: This needs to be made a service -->
+<x-dropdown>
+    <x-slot name="trigger">
+        <button class="
+        text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-500
+        active:bg-gray-600 text-base px-4 py-2 outline-none
+        focus:outline-none mb-1 ease-linear transition-all duration-150 px-10
+        ">
+            {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Pages' }}
+            {{ 'Pages' }}
 
-    <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-1 gap-x-10 text-gray-400">
+        </button>
+    </x-slot>
+
+    @foreach ($categories as $category)
+        <x-dropdown-item
+            href="/category/{{ $category->slug }}"
+           :active='request()->is("category/.{$category->slug}")'
+        >{{ ucwords($category->name) }}
+        </x-dropdown-item>
+    @endforeach
+</x-dropdown>
+<!-- TODO: This needs to be made a service -->
+
+    <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-1 gap-x-10 text-gray-400">Article
         <div class="px-2 py-20">
 
             <h1 class="font-semibold text-base">
