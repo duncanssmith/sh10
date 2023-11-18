@@ -20,6 +20,9 @@
         type="button">
         <a href="/categories">Pages</a>
     </button>
-
-   {{-- <!-- <x-category-dropdown :categories="{{ $categories }}"/> --> --}}
+    <button class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-500 active:bg-gray-600 
+        text-base px-4 py-2 outline-none focus:outline-none mb-1 ease-linear transition-all 
+        duration-150 px-10" type="button" href="#" data-toggle="dropdown" class="header-link" > --- BUTTON ---
+    </button>
+    <x-category-dropdown pages="$pages"/>   
 </div>

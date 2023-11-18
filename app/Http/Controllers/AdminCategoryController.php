@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cover;
 use App\Models\Category;
 use App\Models\CategoryWork;
 use App\Models\CategoryText;

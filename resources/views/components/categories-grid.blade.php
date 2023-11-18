@@ -9,9 +9,6 @@
     @endforeach
 </div>
 
-<div class="">
-
-</div>
 
 
 <!-- <div class=" sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 "> -->

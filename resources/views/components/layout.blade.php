@@ -38,10 +38,10 @@
                 </a>
             </div>
 
-            @include('_ds_nav')
+            @include('partials._ds_nav')
 
             @auth
-                @include('_ds_nav_auth')
+                @include('partials._ds_nav_auth')
             @endauth
 
             <div class="mt-8 md:mt-2 py-2 flex items-center">
@@ -55,8 +55,6 @@
                             </button>
                         </x-slot>
 
-                        <x-dropdown-item href="/admin/posts/" :active="request()->is('admin/posts')" class="text-sm font-bold text-gray-400">List posts</x-dropdown-item>
-                        <x-dropdown-item href="/admin/post/create" :active="request()->is('admin/post/create')" class="text-sm font-bold text-gray-400">Add post</x-dropdown-item>
                         <x-dropdown-item href="#" class="text-base font-bold text-gray-400">
                             <form method="post" action="/logout">
                                 @csrf
@@ -87,7 +85,7 @@
         <footer class="bg-gray-100 border border-gray-200 border-opacity-1 text-center py-4 px-6 mt-6">
             <div class="mt-4">
                 <div class="relative block lg:bg-gray-200 ">
-                    <!-- @include('_footer_content') -->
+                    @include('partials._footer_content')
                 </div>
             </div>
         </footer>

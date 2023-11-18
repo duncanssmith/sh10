@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Cover;
 use App\Models\CategoryText;
 use App\Models\CategoryWork;
-use App\Models\Post;
 use App\Models\Text;
 use App\Models\User;
 use App\Models\Work;
@@ -27,9 +27,8 @@ class DatabaseSeeder extends Seeder
 //        User::truncate();
 //        Category::truncate();
 //        Text::truncate();
-//        Post::truncate();
 //        Work::truncate();
-//
+
         User::factory(1)->create([
             'name' => 'Duncan Smith',
             'username' => 'duncan.smith',
@@ -67,123 +66,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'Film/Video',
             'slug' => 'film-video'
         ]);
-
-//        Category::factory(5)->create();
-
-        /*
-            'thumbnail' => 'thumbnails/7zeWq9tpSiQ2nv5STJ9t6p0QNQOxfHi14LmOlHeC.jpg',
-            'thumbnail' => 'thumbnails/97jiYPsC7c9VBzxS1BuFH2rvjEtMO5vTK2GsH0IA.jpg',
-            'thumbnail' => 'thumbnails/cTYsXr5mseJPbplrCIQCLkzY3g2wTMIJEG2PUDOi.jpg',
-            'thumbnail' => 'thumbnails/JCGD5WhwkslWKwUcyLe1Ar88Y0Nb2L3lDW4nZ3x2.jpg',
-            'thumbnail' => 'thumbnails/MRPr9daxotsvirULK6X4irLMQxGS4Wrt8Woay2n4.jpg',
-            'thumbnail' => 'thumbnails/mxekNxvylONJ9iqxbEW1uMcTgpJTytgneIKgES0R.jpg',
-            'thumbnail' => 'thumbnails/mxekNxvylONJ9iqxbEW1uMcTgpJTytgneIKgES0R.jpg',
-            'thumbnail' => 'thumbnails/ZbQG4WDbzMvLenfgBLd03JF6bqp4leRs0DoxUdBC.jpg',
-            'thumbnail' => 'thumbnails/Qsysl4NML40hjkKnehg86ySWmNgHTppkDJD9OXcP.jpg',
-            'thumbnail' => 'thumbnails/RKvUrGQ5LUXX9sEyGZQZ4KRq7WAGNftO7okpGWWP.jpg',
-            'thumbnail' => 'thumbnails/ybv7KOsH4CIFH06lvD0n2n9mC1xxLqNEQdi5rq9Z.jpg',
-        */
-/*
-
-12falkTLB3dzg1HnH2lkqyKTVRFJq9YOSvKnVQbD.jpg
-4F3bwTIOOb1yHoDwBI2cAWv3rZuPHOnGt9C0R0xV.jpg
-4IVH70HjnLXj87uiMeKBxru2C21i85Al0G7kSgod.jpg
-4xtwAI4ThcPXRfVYDXDMjuqUJDjoNNvb5uWKaz9Y.png
-8scZFndn20Cn3vnrl04RddEQe6QHsSVICv1I23nx.png
-DDKnfn95AAuMHnn3bAHg4bxWOVG5LWGpZw01vH4e.jpg
-Eg7b5x5ktkP5hS4gvQ1RQEAEWJIG5n7wF8TDjXAG.jpg
-F4fXWzuRrwz3DimAO0ai1tHI4DkMv77oJJxh1gYu.jpg
-NxslfjSC6q3xXJtOTWwfM8dV1gSCwFaAtJ15BNsD.png
-PjJPczHx030AAPsfFSC3gfW6KpDlNZgYuGKNCX31.jpg
-RzB2jrFWJB4M0rKIWzCOwW4Q2fnvyUPs00mpSj0i.jpg
-gM5gvTUhIz8Xkf1YHRl1E7Gukh7dtWAIIyvknOCr.png
-qwEQVJsBZgqo0DU9v7bfWlkRNGs3GoqZBdbJtp9k.jpg
-
-*/
-
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/12falkTLB3dzg1HnH2lkqyKTVRFJq9YOSvKnVQbD.jpg',
-            'user_id' => 1,
-            'category_id' => 6,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/4F3bwTIOOb1yHoDwBI2cAWv3rZuPHOnGt9C0R0xV.jpg',
-            'user_id' => 1,
-            'category_id' => 6,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/4IVH70HjnLXj87uiMeKBxru2C21i85Al0G7kSgod.jpg',
-            'user_id' => 1,
-            'category_id' => 6,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/4xtwAI4ThcPXRfVYDXDMjuqUJDjoNNvb5uWKaz9Y.jpg',
-            'user_id' => 1,
-            'category_id' => 6,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/8scZFndn20Cn3vnrl04RddEQe6QHsSVICv1I23nx.jpg',
-            'user_id' => 1,
-            'category_id' => 6,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/DDKnfn95AAuMHnn3bAHg4bxWOVG5LWGpZw01vH4e.jpg',
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/Eg7b5x5ktkP5hS4gvQ1RQEAEWJIG5n7wF8TDjXAG.jpg',
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/F4fXWzuRrwz3DimAO0ai1tHI4DkMv77oJJxh1gYu.jpg',
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/PjJPczHx030AAPsfFSC3gfW6KpDlNZgYuGKNCX31.jpg',
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/NxslfjSC6q3xXJtOTWwfM8dV1gSCwFaAtJ15BNsD.jpg',
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(1)->create([
-            'thumbnail' => 'thumbnails/RzB2jrFWJB4M0rKIWzCOwW4Q2fnvyUPs00mpSj0i.jpg',
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(4)->create([
-            'user_id' => 2,
-            'category_id' => 3,
-        ]);
-        Post::factory(2)->create([
-            'user_id' => 3,
-            'category_id' => 2,
-        ]);
-        Post::factory(5)->create([
-            'user_id' => 4,
-            'category_id' => 5,
-        ]);
-        /*
-        Post::factory(3)->create([
-            'user_id' => 5,
-            'category_id' => 1,
-        ]);
-        Post::factory(2)->create([
-            'user_id' => 6,
-            'category_id' => 2,
-        ]);
-        Post::factory(3)->create([
-            'user_id' => 6,
-            'category_id' => 1,
-        ]);
-        */
-
-//        Text::factory(2)->create();
 
         Text::create([
             'title' => 'New Yorker Review',
@@ -240,23 +122,6 @@ qwEQVJsBZgqo0DU9v7bfWlkRNGs3GoqZBdbJtp9k.jpg
             'publication_date' => '2017-08-15'
         ]);
 
-//        Text::factory(9)->create();
-
-/*
-01 thumbnails/12falkTLB3dzg1HnH2lkqyKTVRFJq9YOSvKnVQbD.jpg
-02 thumbnails/DDKnfn95AAuMHnn3bAHg4bxWOVG5LWGpZw01vH4e.jpg
-03 thumbnails/NxslfjSC6q3xXJtOTWwfM8dV1gSCwFaAtJ15BNsD.png
-04 thumbnails/8scZFndn20Cn3vnrl04RddEQe6QHsSVICv1I23nx.png
-
-05 thumbnails/PjJPczHx030AAPsfFSC3gfW6KpDlNZgYuGKNCX31.jpg
-06 thumbnails/4IVH70HjnLXj87uiMeKBxru2C21i85Al0G7kSgod.jpg
-07 thumbnails/gM5gvTUhIz8Xkf1YHRl1E7Gukh7dtWAIIyvknOCr.png
-08 thumbnails/qwEQVJsBZgqo0DU9v7bfWlkRNGs3GoqZBdbJtp9k.jpg
-
-09 thumbnails/F4fXWzuRrwz3DimAO0ai1tHI4DkMv77oJJxh1gYu.jpg
-10 thumbnails/Eg7b5x5ktkP5hS4gvQ1RQEAEWJIG5n7wF8TDjXAG.jpg
-11 thumbnails/4xtwAI4ThcPXRfVYDXDMjuqUJDjoNNvb5uWKaz9Y.png
-*/
         Work::create([
             'title' => 'Cat\'s Meow',
             'slug' => 'cats-meow',
@@ -417,6 +282,15 @@ qwEQVJsBZgqo0DU9v7bfWlkRNGs3GoqZBdbJtp9k.jpg
             'media' => 'Flashe on plywood',
             'dimensions' => '10 x 20 cm',
             'work_date' => '2020-03-14'
+        ]);
+
+        Cover::create([
+            'title' => 'Home page cover',
+            'slug' => 'homepage-cover',
+            'thumbnail' => '18.jpg',
+            'media' => 'photograph',
+            'dimensions' => '',
+            'cover_date' => '2023-11-06'
         ]);
 
 

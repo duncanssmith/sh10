@@ -31,12 +31,12 @@
                                         </td>
                                         <td class="">
                                             @if ($category->display)
-                                                <i class="fa fa-check text-green-500"></i>
+                                                <i class="fa fa-check text-green-500">Y</i>
                                             @endif
                                         </td>
                                         <td class="">
                                             @if ($category->nav_menu_item)
-                                                <i class="fa fa-check text-green-500"></i>
+                                                <i class="fa fa-check text-green-500">T</i>
                                             @endif
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">{{ count($category->works) }}</td>

@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->string('slug')->unique();
             $table->boolean('nav_menu_item')->default(false);
             $table->boolean('display')->default(true);
+            $table->integer('order')->default(true);
             $table->timestamps();
         });
     }

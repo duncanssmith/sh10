@@ -5,13 +5,15 @@
                 @csrf
                 @method('PATCH')
                 <div class="flex mt-6">
-                    @if($work->thumbnail)
-                    <div class="flex-1">
-                        <img src="{{ asset( 'storage/thumbnails/'.$work->thumbnail) }}" alt="" class="rounded-m ml-6 w-1/2">
-                    </div>
+
+                    @if ($work->thumbnail)
+                        <div class="flex-1">
+                            <img src="{{ asset( 'storage/thumbnails/'.$work->thumbnail) }}" alt="" class="rounded-m ml-6 w-1/2">
+                        </div>
                     @else
                         <h1>No image</h1>
                     @endif
+
                     <div class="flex-1">
                         <x-form.input name="thumbnail" type="file" :value="old('thumbnail', $work->thumbnail)" />
                     </div>

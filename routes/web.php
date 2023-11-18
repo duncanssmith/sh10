@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminTextController;
 use App\Http\Controllers\AdminWorkController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminCoverController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\TextController;
@@ -31,6 +32,19 @@ Route::get('/home/{category:slug}', [CategoryController::class, 'home'])->name('
 Route::get('/', [CategoryController::class, 'index'])->name('list categories');
 Route::get('/categories', [CategoryController::class, 'index'])->name('list categories');
 Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('show a category');
+
+// Set cover
+Route::get('/admin/set_cover/{id}', [AdminCoverController::class, 'set'])->name('set cover')->middleware('admin');
+Route::post('/admin/save_set_cover', [AdminCoverController::class, 'save_set_cover'])->name('set save cover')->middleware('admin');
+
+/* auth covers */
+Route::get('/admin/covers/{cover:slug}', [AdminCoverController::class, 'show'])->name('show cover');
+Route::post('/admin/cover', [AdminCoverController::class, 'store'])->name('save cover');
+Route::get('/admin/cover/create', [AdminCoverController::class, 'create'])->name('create cover');
+Route::get('/admin/covers', [AdminCoverController::class, 'index'])->name('admin covers index')->middleware('admin');
+Route::get('/admin/cover/{cover}/edit', [AdminCoverController::class, 'edit'])->name('admin cover edit')->middleware('admin');
+Route::patch('admin/cover/{cover}', [AdminCoverController::class, 'update'])->middleware('admin');
+Route::delete('admin/cover/{cover}', [AdminCoverController::class, 'destroy'])->middleware('admin');
 
 /* guest works */
 Route::get('/works', [WorkController::class, 'index'])->name('list works');

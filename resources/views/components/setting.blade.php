@@ -12,19 +12,20 @@
     <x-panel>
         <aside class="w-48 bg-white border py-4 px-4">
         <h4 class="text-gray-400 font-semibold mb-4">Admin options</h4>
-        <ul>
-{{--            class="block text-left px-3 text-sm leading-6 hover:bg-gray-200 focus:bg-gray-200 hover:text-gray-600 focus:text-gray-700 text-sm font-bold text-gray-400"--}}
-
+        <ul class="block text-left px-3 text-sm leading-6 hover:bg-gray-200 focus:bg-gray-200 hover:text-gray-600 focus:text-gray-700 text-sm font-bold text-gray-400" >
             <li class="text-gray-500 text-sm">
-                <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-gray-100 bg-gray-700' : '' }}
+                <a href="/admin/covers" class="{{ request()->is('admin/covers') ? 'text-gray-100 bg-gray-700' : '' }}
                     block text-left px-3 text-sm leading-6 hover:bg-gray-200 focus:bg-gray-200 hover:text-gray-600 focus:text-gray-700 text-sm font-bold text-gray-400
-                ">Posts</a>
-            </li>
-            <li class="text-gray-500 text-sm">
-                <a href="/admin/post/create" class="{{ request()->is('admin/post/create') ? 'text-gray-100 bg-gray-700' : '' }}
+                ">Covers</a>
+                <a href="/admin/cover/create" class="{{ request()->is('admin/cover/create') ? 'text-gray-100 bg-gray-700' : '' }}
                     block text-left px-3 text-sm leading-6 hover:bg-gray-200 focus:bg-gray-200 hover:text-gray-600 focus:text-gray-700 text-sm font-bold text-gray-400
-                    ">Add post</a>
+                    ">+</a>
             </li>
+            <!-- <li class="text-gray-500 text-sm"> -->
+                <!-- <a href="/admin/cover/create" class="{{ request()->is('admin/cover/create') ? 'text-gray-100 bg-gray-700' : '' }} -->
+                    <!-- block text-left px-3 text-sm leading-6 hover:bg-gray-200 focus:bg-gray-200 hover:text-gray-600 focus:text-gray-700 text-sm font-bold text-gray-400 -->
+                    <!-- ">Add cover</a> -->
+            <!-- </li> -->
             <li class="text-gray-500 text-sm">
                 <a href="/admin/categories" class="{{ request()->is('admin/categories') ? 'text-gray-100 bg-gray-700' : '' }}
                     block text-left px-3 text-sm leading-6 hover:bg-gray-200 focus:bg-gray-200 hover:text-gray-600 focus:text-gray-700 text-sm font-bold text-gray-400
