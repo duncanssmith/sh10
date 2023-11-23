@@ -1,5 +1,4 @@
-<x-layout :categories="$categories">
-   <x-category-dropdown :categories="$categories"/>
+<x-layout :pages="$pages">
 
     <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-1 gap-x-10 text-gray-400">
         <div class="px-2 py-20">

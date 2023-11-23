@@ -5,8 +5,10 @@ namespace App\Providers;
 use App\View\Composers\NavigationComposer;
 use Illuminate\Support\Facades;
 use Illuminate\Support\Facades\Blade;
+// use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View;
+use App\Models\Category;
  
 class ViewServiceProvider extends ServiceProvider
 {
@@ -25,7 +27,12 @@ class ViewServiceProvider extends ServiceProvider
     {
         // Using class based composers...
         // dd(app()->make('Hello'));
-        Facades\View::composer('partials._ds_nav', NavigationComposer::class);
+
+        // Facades\View::composer('partials._ds_nav', NavigationComposer::class);
+
+        // view()->share('pages', $this->categories->where('display', '=', 1)->orderBy('order', 'asc')->get());
+
+        // Facades\View::share('pages', $pages);
 
         // Blade::component('category-dropdown', Dropdown::class);
 

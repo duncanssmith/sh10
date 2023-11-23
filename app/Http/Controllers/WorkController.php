@@ -36,24 +36,6 @@ class WorkController extends Controller
             return Work::where('slug', $slug)->firstOrFail();
         });
 
-        // $visibility = Storage::getVisibility($work->thumbnail);
-
-        // print_r('Before: '.$visibility);
-
-        // Storage::setVisibility($work->thumbnail, 'public');
-
-        // print_r('After : '.$visibility);
-
-        // $path = storage_path( $work->thumbnail );
-
-        // dd($path);
-
-        // Storage::disk('public')->put($work->slug.'.html', '<h1>'.$work->slug.'</h1><img src="'. $work->thumbnail . '"/>');
-
-        // $image = Storage::disk('local')->get($work->thumbnail);
-
-        // dd($image1);
-
         return view('works.show', [
             'work' => $work,
             'title' => 'A work',
